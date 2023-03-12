@@ -1,8 +1,15 @@
 from cliente_class import Cliente
+import random
 
-cliente1 = Cliente(123, "santiago", "san luis este", "AB123")
+id=random.randrange(100, 500)
 
+cliente1 = Cliente(id, "santiago", "san luis este", 1234)
 print(cliente1)
+
+print("--------------------------------------------------")
 
 cliente1.comprar_articulo()
 
+print("--------------------------------------------------")
+
+cliente1.membresia()
