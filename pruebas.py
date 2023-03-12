@@ -1,15 +1,9 @@
 
 carrito = []
 
-print("-----------------")
-print("lista de compras")
-print("-----------------")
-
-
 while True:
-    print("1. añadir")
+    print("1. añadir al carrito")
 
-    opcion = input("-->")
-    print()
+    articulo = input("ingrese articulo")
 
-    
+
