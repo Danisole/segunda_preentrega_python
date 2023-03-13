@@ -61,7 +61,7 @@ class Cliente:
                     print("-", art)  
             
             elif opciones_carrito == 4:
-                print(f"Compra finalizada, Ticket: {random.randrange(100000, 500000)}, Fecha {datetime.now()} ")
+                print(f"Compra finalizada, Ticket N°: {random.randrange(100000, 500000)}, Fecha {datetime.now()} ")
                 break
             
             else:
@@ -87,7 +87,7 @@ class Cliente:
         else:
             print("Disculpe la opcion ingresada no corresponde")
 
-            tipo_membresia = input("Ingrese nuevamente el tipó de membresia deseada:\n -Standar\n -Gold\n -Black:  ").capitalize()
+            tipo_membresia = input("Ingrese nuevamente el tipo de membresia deseada:\n -Standar\n -Gold\n -Black:  ").capitalize()
 
 
 

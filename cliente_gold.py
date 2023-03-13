@@ -3,7 +3,7 @@ import random
 
 id=random.randrange(100, 500)
 
-tu_app = input("elije una app y la suscripcion sera bonificada: ").lower()
+tu_app = input("Elije una app y la suscripcion sera bonificada: ").lower()
 
 cliente3 = Cliente_gold(id, "Morena", "rioja este", 12345, tu_app)
 
