@@ -3,6 +3,8 @@ import random
 
 id=random.randrange(100, 1000)
 
+print("--------------------------------------------------")
+
 cliente1 = Cliente(id, "santiago", "san luis este", 1234)
 print(cliente1)
 

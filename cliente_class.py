@@ -1,7 +1,10 @@
-from coeficientes import coeficiente_gold, coeficiente_black
+from assets.coeficientes import coeficiente_gold, coeficiente_black
 import random
 from datetime import datetime
 
+
+ticket = random.randrange(100000, 500000)
+fecha_ticket = datetime.now()
 class Cliente:
 
 
@@ -41,28 +44,44 @@ class Cliente:
                 producto = input("Ingrese un producto:  ").lower()
 
                 if producto in carrito:
-                    print("El producto ya esta en la lista")
+                    print(f"El producto {producto} ya esta en la lista")
                 else:
                     carrito.append(producto)
+                    print(f"Ud. agrego {producto} a su carrito")
 
             elif opciones_carrito == 2:
 
                 producto = input("Ingrese un producto:  ").lower()
 
                 if producto not in carrito:
-                    print("Este producto no esta en el carrito")
+                    print(f"El producto {producto} no esta en el carrito")
                 else:
-                    carrito.remove(producto)   
+                    carrito.remove(producto) 
+                    print(f"Ud. removio {producto} satisfactoriamente")
+
+                    if carrito == []:
+                        print("El carrito esta vacio")
 
             elif opciones_carrito == 3:
 
                 print("Lista de compras: ")
-                for art in carrito:
-                    print("-", art)  
+
+                if carrito == []:
+                        print("El carrito esta vacio")
+
+                else:
+                    for art in carrito:
+                        print("-", art) 
             
             elif opciones_carrito == 4:
-                print(f"Compra finalizada, Ticket N°: {random.randrange(100000, 500000)}, Fecha {datetime.now()} ")
-                break
+
+                if carrito == []:
+                    print("El carrito esta vacio, lo esperamos nuevamente para su proxima compra")
+                    break
+
+                else:    
+                    print(f"Felicitaciones! su compra finalizo correctamente,su numero de Ticket es: {ticket}, Fecha {fecha_ticket} ")
+                    break
             
             else:
                 print("La opcion que ingresaste es incorrecta")    
@@ -85,7 +104,7 @@ class Cliente:
             print(f"Felicitaciones! Ud eligio ser miembro {tipo_membresia}!")
 
         else:
-            print("Disculpe la opcion ingresada no corresponde")
+            print("Disculpe, la opcion ingresada no corresponde")
 
             tipo_membresia = input("Ingrese nuevamente el tipo de membresia deseada:\n -Standar\n -Gold\n -Black:  ").capitalize()
 
@@ -99,7 +118,7 @@ class Cliente_gold(Cliente):
         self.app_bonificada = app_bonificada
 
     def __str__(self):
-        return f"tu app bonificada es: {self.app_bonificada}" 
+        return f"Cliente: el ID del cliente es: {self._ID}, nombre: {self._nombre}, con domicilio: {self.direccion}, numero de telefono: {self.telefono} y tu app bonificada es: {self.app_bonificada}" 
 
     def comprar_articulo(self):
         return super().comprar_articulo()
@@ -121,7 +140,7 @@ class Cliente_black(Cliente):
         self.descuento = descuento
 
     def __str__(self):
-        return f"Tendras todos los dias 20% de descuento de: {self.descuento}"   
+        return f"Cliente: el ID del cliente es: {self._ID}, nombre: {self._nombre}, con domicilio: {self.direccion}, numero de telefono: {self.telefono}.\n Tendras todos los dias 20% de descuento en: {self.descuento}"   
 
     def comprar_articulo(self):
         return super().comprar_articulo()
