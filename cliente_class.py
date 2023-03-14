@@ -6,8 +6,6 @@ from datetime import datetime
 ticket = random.randrange(100000, 500000)
 fecha_ticket = datetime.now()
 class Cliente:
-
-
     
     def __init__(self, ID, nombre, direccion, telefono):
         self._ID = ID
@@ -118,7 +116,7 @@ class Cliente_gold(Cliente):
         self.app_bonificada = app_bonificada
 
     def __str__(self):
-        return f"Cliente: el ID del cliente es: {self._ID}, nombre: {self._nombre}, con domicilio: {self.direccion}, numero de telefono: {self.telefono} y tu app bonificada es: {self.app_bonificada}" 
+        return f"Tu app bonificada es: {self.app_bonificada}" 
 
     def comprar_articulo(self):
         return super().comprar_articulo()
@@ -140,7 +138,7 @@ class Cliente_black(Cliente):
         self.descuento = descuento
 
     def __str__(self):
-        return f"Cliente: el ID del cliente es: {self._ID}, nombre: {self._nombre}, con domicilio: {self.direccion}, numero de telefono: {self.telefono}.\n Tendras todos los dias 20% de descuento en: {self.descuento}"   
+        return f"Tendras todos los dias 20% de descuento en: {self.descuento}"   
 
     def comprar_articulo(self):
         return super().comprar_articulo()
