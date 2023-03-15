@@ -1,0 +1,8 @@
+README.md
+setup.py
+assets/coeficientes.py
+assets/pruebas.py
+segunda_preentrega.egg-info/PKG-INFO
+segunda_preentrega.egg-info/SOURCES.txt
+segunda_preentrega.egg-info/dependency_links.txt
+segunda_preentrega.egg-info/top_level.txt
