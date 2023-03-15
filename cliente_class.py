@@ -1,6 +1,7 @@
 from assets.coeficientes import coeficiente_gold, coeficiente_black
 import random
 from datetime import datetime
+from loguear import login
 
 
 ticket = random.randrange(100000, 500000)
@@ -16,7 +17,7 @@ class Cliente:
 
     def __str__(self):
         return(f"Cliente: el ID del cliente es: {self._ID}, nombre: {self._nombre}, con domicilio: {self.direccion}, numero de telefono: {self.telefono}")
-
+    
 
     def comprar_articulo(self):
 
